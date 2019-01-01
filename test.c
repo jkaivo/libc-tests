@@ -66,3 +66,18 @@ void test_bool_imp(const char *expression, int result, int expected)
 	int success = (result && expected) || (!result && !expected);
 	print_result(success, "%s%s", expected ? "" : "!", expression);
 }
+
+void test_string_imp(const char *expression, const char *totest, const char *tocompare)
+{
+	int success = 1;
+	int i;
+	for (i = 0; totest[i] != '\0'; i++) {
+		if (totest[i] != tocompare[i]) {
+			success = 0;
+		}
+	}
+	if (tocompare[i] != '\0') {
+		success = 0;
+	}
+	print_result(success, "%s == \"%s\"", expression, tocompare);
+}

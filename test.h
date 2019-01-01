@@ -11,5 +11,9 @@ void test_bool_imp(const char *, int, int);
 #define test_false(expression) test_bool_imp(#expression, expression, 0)
 #define test_true(expression) test_bool_imp(#expression, expression, 1)
 
+void test_string_imp(const char*, const char*, const char*);
+#define test_string(expression, string) test_string_imp(#expression, expression, string)
+
 void test_assert(void);
 void test_ctype(void);
+void test_locale(void);
