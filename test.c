@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+static int passed;
+static int failed;
+
 typedef enum {
 	DEFAULT = 39,
 	RED = 31,
@@ -21,9 +24,14 @@ static void print_result(int success, const char *format, ...)
 	Color color = GREEN;
 	char indicator = '+';
 
-	if (!success) {
-		color = RED;
-		indicator = '!';
+	if (success) {
+		set_output_color(GREEN);
+		printf("+ ");
+		passed++;
+	} else {
+		set_output_color(RED);
+		printf("- ");
+		failed++;
 	}
 
 	set_output_color(color);
@@ -33,7 +41,7 @@ static void print_result(int success, const char *format, ...)
 	vprintf(format, ap);
 	va_end(ap);
 
-	printf("\n");
+	printf("%c", success ? '\r' : '\n');
 	set_output_color(DEFAULT);
 }
 
@@ -44,6 +52,14 @@ void testing_header(const char *header)
 	printf("<%s>", header);
 	set_output_color(DEFAULT);
 	printf("\n");
+}
+
+void testing_end(void)
+{
+	printf("%d tests passed, %d tests failed\n", passed, failed);
+
+	passed = 0;
+	failed = 0;
 }
 
 void testing_comment(const char *comment)

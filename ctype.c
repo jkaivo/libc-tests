@@ -81,4 +81,6 @@ void test_ctype(void)
 
 	test_ctype_conversion(tolower, UPPER, LOWER);
 	test_ctype_conversion(toupper, LOWER, UPPER);
+
+	testing_end();
 }

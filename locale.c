@@ -72,4 +72,6 @@ void test_locale(void)
 	test_int_equals(lc->n_sep_by_space, CHAR_MAX);
 	test_int_equals(lc->p_sign_posn, CHAR_MAX);
 	test_int_equals(lc->n_sign_posn, CHAR_MAX);
+
+	testing_end();
 }
