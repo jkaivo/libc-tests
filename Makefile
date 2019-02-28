@@ -2,12 +2,12 @@
 
 include config.mk
 
-CFLAGS=-I$(INCLUDEDIR) -nostdinc -fno-builtin
+CFLAGS=-g -I$(INCLUDEDIR) -nostdinc -fno-builtin
 LDFLAGS=-L$(LIBDIR) $(LIBS)
 
 TESTOBJS=main.o test.o assert.o ctype.o locale.o
 
-testlibc: $(TESTOBJS)
+testlibc: $(TESTOBJS) $(LIBDIR)/libc.a
 	$(CC) -o $@ $(TESTOBJS) $(LDFLAGS)
 
 assert.o: assert.c test.h
