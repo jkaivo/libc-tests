@@ -1,8 +1,14 @@
-CC=c89
-CFLAGS=-Wall -Wextra -Wpedantic
+.POSIX:
 
-testlibc: main.o test.o assert.o ctype.o locale.o
-	$(CC) -o $@ *.o
+include config.mk
+
+CFLAGS=-I$(INCLUDEDIR) -nostdinc -fno-builtin
+LDFLAGS=-L$(LIBDIR) $(LIBS)
+
+TESTOBJS=main.o test.o assert.o ctype.o locale.o
+
+testlibc: $(TESTOBJS)
+	$(CC) -o $@ $(TESTOBJS) $(LDFLAGS)
 
 assert.o: assert.c test.h
 
