@@ -38,4 +38,6 @@ void test_assert_h(void)
 #include <assert.h>
 	testing_comment("Unsuccessful assertion should execute");
 	test_void(assert(n == 0));
+
+	testing_end();
 }
