@@ -8,7 +8,7 @@ void test_int_equals_imp(const char*, int, int);
 #define test_int_equals(expression, expected) test_int_equals_imp(#expression, expression, expected)
 
 void test_void_imp(const char*);
-#define test_void(expression) test_void_imp(#expression)
+#define test_void(expression) ((void)expression), test_void_imp(#expression)
 
 void test_bool_imp(const char *, int, int);
 #define test_false(expression) test_bool_imp(#expression, expression, 0)
