@@ -89,7 +89,10 @@ void test_int_equals_imp(const char *expression, int result, int expected)
 
 void test_void_imp(const char *expression)
 {
-	printf("? %s\n", expression);
+	putchar('?');
+	if (verbose) {
+		printf(" %s\n", expression);
+	}
 }
 
 void test_bool_imp(const char *expression, int result, int expected)
