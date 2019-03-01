@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
 	test_locale_h();
 	/* test_math_h(); */
 	/* test_setjmp_h(); */
-	/* test_signal_h(); */
+	test_signal_h();
 	/* test_stdalign_h(); */
 	/* test_stdarg_h(); */
 	/* test_stdatomic_h(); */
