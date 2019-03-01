@@ -26,7 +26,7 @@ void test_stdlib_h(void);
 void test_stdnoreturn_h(void);
 void test_string_h(void);
 void test_tgmath_h(void);
-void test_threads_h(void)/
+void test_threads_h(void);
 void test_time_h(void);
 void test_uchar_h(void);
 void test_wchar_h(void);
