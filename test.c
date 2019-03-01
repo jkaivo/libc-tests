@@ -25,12 +25,10 @@ static void print_result(int success, const char *format, ...)
 	char indicator = '+';
 
 	if (success) {
-		set_output_color(GREEN);
-		printf("+ ");
+		color = GREEN;
 		passed++;
 	} else {
-		set_output_color(RED);
-		printf("- ");
+		color = RED;
 		failed++;
 	}
 
