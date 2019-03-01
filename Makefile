@@ -17,10 +17,10 @@ testlibc: $(TESTOBJS) $(LIBDIR)/libc.a
 
 assert.o: assert.c test.h
 ctype.o: ctype.c test.h
-locale.o: locale.c test.h
+locale.o: locale.c locale.d test.h
 errno.o: errno.c test.h
 time.o: time.c test.h
-signal.o: signal.c signal.d
+signal.o: signal.c signal.d test.h
 test.o: test.c test.h
 main.o: main.c test.h
 

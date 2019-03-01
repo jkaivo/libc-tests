@@ -2,41 +2,11 @@
 #include <limits.h>
 #include "test.h"
 
-#ifndef LC_ALL
-#error LC_ALL not defined
-#endif
-
-#ifndef LC_COLLATE
-#error LC_COLLATE not defined
-#endif
-
-#ifndef LC_CTYPE
-#error LC_CTYPE not defined
-#endif
-
-#ifndef LC_MONETARY
-#error LC_MONETARY not defined
-#endif
-
-#ifndef LC_NUMERIC
-#error LC_NUMERIC not defined
-#endif
-
-#ifndef LC_TIME
-#error LC_TIME not defined
-#endif
+#include "locale.d"
 
 void test_locale_h(void)
 {
 	struct lconv *lc;
-	int locale_categories[] = {
-		LC_ALL,
-		LC_COLLATE,
-		LC_CTYPE,
-		LC_MONETARY,
-		LC_NUMERIC,
-		LC_TIME,
-	};
 
 	testing_header("locale.h");
 
