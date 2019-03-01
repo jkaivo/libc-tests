@@ -6,7 +6,7 @@
 
 /distinct/ {
 	printf("static int %s[] = {\n", $2);
-	for (i = 3; i < NF; i++) {
+	for (i = 3; i <= NF; i++) {
 		#printf("#ifndef %s\n", $i);
 		#printf("#error %s not defined\n", $i);
 		#printf("#endif\n");

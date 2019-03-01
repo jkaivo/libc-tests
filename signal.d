@@ -6,4 +6,5 @@ static int signals[] = {
 	SIGILL,
 	SIGINT,
 	SIGSEGV,
+	SIGTERM,
 };
