@@ -41,7 +41,7 @@ static void print_result(int success, const char *format, ...)
 	vprintf(format, ap);
 	va_end(ap);
 
-	printf("%c", success ? '\r' : '\n');
+	printf("%c", success ? '\n' : '\n');
 	set_output_color(DEFAULT);
 }
 
@@ -96,4 +96,18 @@ void test_string_imp(const char *expression, const char *totest, const char *toc
 		success = 0;
 	}
 	print_result(success, "%s == \"%s\"", expression, tocompare);
+}
+
+void test_distinct_imp(const char *arrayname, int *array, size_t nelements)
+{
+	int success = 1;
+	size_t i, j;
+	for (i = 0; i < nelements; i++) {
+		for (j = i + 1; j < nelements; j++) {
+			if (array[i] == array[j]) {
+				success = 0;
+			}
+		}
+	}
+	print_result(success, "Elements in %s are%s distinct", arrayname, success ? "" : " not");
 }

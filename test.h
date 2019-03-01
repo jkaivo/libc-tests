@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 void testing_header(const char *);
 void testing_comment(const char*);
 void testing_end(void);
@@ -15,6 +17,10 @@ void test_bool_imp(const char *, int, int);
 void test_string_imp(const char*, const char*, const char*);
 #define test_string(expression, string) test_string_imp(#expression, expression, string)
 
+void test_distinct_imp(const char*, int *, size_t);
+#define test_distinct(array) test_distinct_imp(#array, array, sizeof(array) / sizeof(array[0]))
+
 void test_assert(void);
 void test_ctype(void);
 void test_locale(void);
+void test_errno(void);
