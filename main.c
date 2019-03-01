@@ -9,6 +9,7 @@ int main(int argc, char *argv[])
 		}
 	}
 
+	test_time();
 	test_errno();
 	test_ctype();
 	test_locale();

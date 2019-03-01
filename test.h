@@ -24,3 +24,4 @@ void test_assert(void);
 void test_ctype(void);
 void test_locale(void);
 void test_errno(void);
+void test_time(void);
