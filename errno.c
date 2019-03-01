@@ -15,7 +15,7 @@
 #endif
 #endif
 
-void test_errno(void)
+void test_errno_h(void)
 {
 	struct lconv *lc;
 	int errno_values[] = {

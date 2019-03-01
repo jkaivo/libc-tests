@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "test.h"
 
-void test_assert(void)
+void test_assert_h(void)
 {
 	int n = 0;
 

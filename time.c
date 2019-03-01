@@ -15,7 +15,7 @@
 	test_string(buf, _expected); \
 } while (0)
 
-void test_time(void)
+void test_time_h(void)
 {
 	struct tm tm;
 	tm.tm_year = 2001 - 1900;

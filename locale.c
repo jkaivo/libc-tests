@@ -26,7 +26,7 @@
 #error LC_TIME not defined
 #endif
 
-void test_locale(void)
+void test_locale_h(void)
 {
 	struct lconv *lc;
 	int locale_categories[] = {

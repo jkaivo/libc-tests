@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+unsigned int total_passed = 0;
+unsigned int total_failed = 0;
 static int passed;
 static int failed;
 int verbose = 0;
@@ -66,7 +68,10 @@ void testing_end(void)
 
 	printf("%d tests passed, %d tests failed\n", passed, failed);
 
+	total_passed += passed;
 	passed = 0;
+
+	total_failed += failed;
 	failed = 0;
 }
 

@@ -20,8 +20,6 @@ void test_string_imp(const char*, const char*, const char*);
 void test_distinct_imp(const char*, int *, size_t);
 #define test_distinct(array) test_distinct_imp(#array, array, sizeof(array) / sizeof(array[0]))
 
-void test_assert(void);
-void test_ctype(void);
-void test_locale(void);
-void test_errno(void);
-void test_time(void);
+extern int verbose;
+extern unsigned int total_passed;
+extern unsigned int total_failed;

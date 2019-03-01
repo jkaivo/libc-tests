@@ -64,7 +64,7 @@ static void test_ctype_conversion_imp(const char *fnname, int (*fn)(int), const 
 	test_int_equals_imp(expression, fn(EOF), EOF);
 }
 
-void test_ctype(void)
+void test_ctype_h(void)
 {
 	testing_header("ctype.h");
 	test_ctype_function(isalnum, UPPER LOWER DIGIT);
