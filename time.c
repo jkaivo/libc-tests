@@ -32,26 +32,26 @@ void test_time_h(void)
 	mktime(&tm);
 
 	testing_comment("testing asctime()");
-	test_string(asctime(&tm), "something something");
+	test_string(asctime(&tm), "Wed Jul  4 13:40:50 2001\n");
 
 	testing_comment("testing strftime()");
-	test_strftime("%a", tm, "???");
-	test_strftime("%A", tm, "???day");
-	test_strftime("%b", tm, "Jun");
-	test_strftime("%B", tm, "June");
+	test_strftime("%a", tm, "Wed");
+	test_strftime("%A", tm, "Wednesday");
+	test_strftime("%b", tm, "Jul");
+	test_strftime("%B", tm, "July");
 	test_strftime("%c", tm, "see 7.23.1");
 	test_strftime("%C", tm, "01");
 	test_strftime("%d", tm, "04");
-	test_strftime("%D", tm, "06/04/01");
+	test_strftime("%D", tm, "07/04/01");
 	test_strftime("%e", tm, " 4");
-	test_strftime("%F", tm, "2001-06-04");
+	test_strftime("%F", tm, "2001-07-04");
 	test_strftime("%g", tm, "week_of_year");
 	test_strftime("%G", tm, "2001");
-	test_strftime("%h", tm, "Jun");
+	test_strftime("%h", tm, "Jul");
 	test_strftime("%H", tm, "13");
 	test_strftime("%I", tm, "01");
 	test_strftime("%j", tm, "160");
-	test_strftime("%m", tm, "06");
+	test_strftime("%m", tm, "07");
 	test_strftime("%n", tm, "\n");
 	test_strftime("%p", tm, "PM");
 	test_strftime("%r", tm, "01:40");
