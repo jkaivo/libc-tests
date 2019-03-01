@@ -2,12 +2,6 @@
 #include <limits.h>
 #include "test.h"
 
-void test_locale(void)
-{
-	struct lconv *lc;
-
-	testing_header("locale.h");
-
 #ifndef LC_ALL
 #error LC_ALL not defined
 #endif
@@ -32,25 +26,21 @@ void test_locale(void)
 #error LC_TIME not defined
 #endif
 
-	test_true(LC_ALL != LC_COLLATE);
-	test_true(LC_ALL != LC_CTYPE);
-	test_true(LC_ALL != LC_MONETARY);
-	test_true(LC_ALL != LC_NUMERIC);
-	test_true(LC_ALL != LC_TIME);
+void test_locale(void)
+{
+	struct lconv *lc;
+	int locale_categories[] = {
+		LC_ALL,
+		LC_COLLATE,
+		LC_CTYPE,
+		LC_MONETARY,
+		LC_NUMERIC,
+		LC_TIME,
+	};
 
-	test_true(LC_COLLATE != LC_CTYPE);
-	test_true(LC_COLLATE != LC_MONETARY);
-	test_true(LC_COLLATE != LC_NUMERIC);
-	test_true(LC_COLLATE != LC_TIME);
+	testing_header("locale.h");
 
-	test_true(LC_CTYPE != LC_MONETARY);
-	test_true(LC_CTYPE != LC_NUMERIC);
-	test_true(LC_CTYPE != LC_TIME);
-
-	test_true(LC_MONETARY != LC_NUMERIC);
-	test_true(LC_MONETARY != LC_TIME);
-
-	test_true(LC_NUMERIC != LC_TIME);
+	test_distinct(locale_categories);
 
 	/* TODO: test setlocale() */
 
