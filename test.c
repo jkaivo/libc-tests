@@ -3,6 +3,7 @@
 
 static int passed;
 static int failed;
+int verbose = 0;
 
 typedef enum {
 	DEFAULT = 39,
@@ -29,17 +30,22 @@ static void print_result(int success, const char *format, ...)
 		passed++;
 	} else {
 		color = RED;
+		indicator = '-';
 		failed++;
 	}
 
 	set_output_color(color);
-	printf("%c ", indicator);
+	putchar(indicator);
 
-	va_start(ap, format);
-	vprintf(format, ap);
-	va_end(ap);
+	if (verbose) {
+		putchar(' ');
 
-	printf("%c", success ? '\n' : '\n');
+		va_start(ap, format);
+		vprintf(format, ap);
+		va_end(ap);
+
+		putchar(success ? '\n' : '\n');
+	}
 	set_output_color(DEFAULT);
 }
 
@@ -54,6 +60,10 @@ void testing_header(const char *header)
 
 void testing_end(void)
 {
+	if (!verbose) {
+		putchar('\n');
+	}
+
 	printf("%d tests passed, %d tests failed\n", passed, failed);
 
 	passed = 0;
@@ -62,7 +72,9 @@ void testing_end(void)
 
 void testing_comment(const char *comment)
 {
-	printf("- %s\n", comment);
+	if (verbose) {
+		printf("- %s\n", comment);
+	}
 }
 
 void test_int_equals_imp(const char *expression, int result, int expected)
