@@ -55,8 +55,8 @@ int main(int argc, char *argv[])
 	/* test_stdalign_h(); */
 	/* test_stdarg_h(); */
 	/* test_stdatomic_h(); */
-	/* test_stdbool_h(); */
-	/* test_stddef_h(); */
+	test_stdbool_h();
+	test_stddef_h();
 	/* test_stdint_h(); */
 	/* test_stdio_h(); */
 	/* test_stdlib_h(); */
