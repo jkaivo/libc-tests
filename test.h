@@ -8,7 +8,7 @@ void test_int_equals_imp(const char*, int, int);
 #define test_int_equals(expression, expected) test_int_equals_imp(#expression, expression, expected)
 
 void test_long_equals_imp(const char*, long, long);
-#define test_long_equals(expression, expected) test_int_equals_imp(#expression, expression, expected)
+#define test_long_equals(expression, expected) test_long_equals_imp(#expression, expression, expected)
 
 void test_double_imp(const char*, double, double);
 #define test_double(expression, expected) test_double_imp(#expression, expression, expected)
