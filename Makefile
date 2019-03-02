@@ -2,14 +2,18 @@
 
 include config.mk
 
+CC=c99
 CFLAGS=-g -I$(INCLUDEDIR) -nostdinc -fno-builtin
 LDFLAGS=-L$(LIBDIR) $(LIBS)
 
 TESTOBJS=main.o \
 	assert.o \
+	complex.o \
 	ctype.o \
 	errno.o \
+	fenv.o \
 	float.o \
+	inttypes.o \
 	iso646.o \
 	limits.o \
 	locale.o \
@@ -19,10 +23,14 @@ TESTOBJS=main.o \
 	stdarg.o \
 	stdbool.o \
 	stddef.o \
+	stdint.o \
 	stdio.o \
 	stdlib.o \
 	string.o \
+	tgmath.o \
 	time.o \
+	wchar.o \
+	wctype.o \
 	test.o
 
 testlibc: $(TESTOBJS) $(LIBDIR)/libc.a
