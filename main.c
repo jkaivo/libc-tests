@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 		}
 	}
 
-	/* test_complex_h(); */
+	test_complex_h();
 	test_ctype_h();
 	test_errno_h();
 	/* test_fenv_h(); */
