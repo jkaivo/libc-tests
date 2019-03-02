@@ -9,7 +9,7 @@ void test_errno_h(void);
 void test_fenv_h(void);
 void test_float_h(void);
 void test_inttypes_h(void);
-void test_iso646(void);
+void test_iso646_h(void);
 void test_limits_h(void);
 void test_locale_h(void);
 void test_math_h(void);
@@ -44,10 +44,10 @@ int main(int argc, char *argv[])
 	test_ctype_h();
 	test_errno_h();
 	/* test_fenv_h(); */
-	/* test_float_h(); */
+	test_float_h();
 	/* test_inttypes_h(); */
-	/* test_iso646(); */
-	/* test_limits_h(); */
+	test_iso646_h();
+	test_limits_h();
 	test_locale_h();
 	/* test_math_h(); */
 	/* test_setjmp_h(); */
