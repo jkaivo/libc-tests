@@ -58,10 +58,10 @@ int main(int argc, char *argv[])
 	test_stdbool_h();
 	test_stddef_h();
 	/* test_stdint_h(); */
-	/* test_stdio_h(); */
-	/* test_stdlib_h(); */
+	test_stdio_h();
+	test_stdlib_h();
 	/* test_stdnoreturn_h(); */
-	/* test_string_h(); */
+	test_string_h();
 	/* test_tgmath_h(); */
 	/* test_threads_h(); */
 	test_time_h();

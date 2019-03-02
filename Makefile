@@ -19,6 +19,9 @@ TESTOBJS=main.o \
 	stdarg.o \
 	stdbool.o \
 	stddef.o \
+	stdio.o \
+	stdlib.o \
+	string.o \
 	time.o \
 	test.o
 
