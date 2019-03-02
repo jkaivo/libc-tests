@@ -22,5 +22,13 @@ void test_stdlib_h(void)
 	test_true(NULL == 0);
 	test_min(RAND_MAX, 32767);
 
+	test_int_equals(atoi("100"), 100);
+	test_int_equals(atoi("-100"), -100);
+	test_long_equals(strtol("0xff", NULL, 0), 0xff);
+	test_long_equals(strtol("      +07777q", NULL, 0), 07777);
+	test_long_equals(strtol("-beef", NULL, 16), -0xbeef);
+	test_long_equals(strtol("zzzzzzzzzzzzzzzzzzzz", NULL, 36), LONG_MAX);
+	test_long_equals(strtol("-zzzzzzzzzzzzzzzzzzzz", NULL, 36), LONG_MIN);
+
 	testing_end();
 }
