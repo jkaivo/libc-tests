@@ -20,15 +20,20 @@ TESTOBJS=main.o \
 	math.o \
 	setjmp.o \
 	signal.o \
+	stdalign.o \
 	stdarg.o \
+	stdatomic.o \
 	stdbool.o \
 	stddef.o \
 	stdint.o \
 	stdio.o \
 	stdlib.o \
+	stdnoreturn.o \
 	string.o \
 	tgmath.o \
+	threads.o \
 	time.o \
+	uchar.o \
 	wchar.o \
 	wctype.o \
 	test.o

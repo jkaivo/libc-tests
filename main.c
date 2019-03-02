@@ -52,20 +52,20 @@ int main(int argc, char *argv[])
 	test_math_h();
 	/* test_setjmp_h(); */
 	test_signal_h();
-	/* test_stdalign_h(); */
+	test_stdalign_h();
 	test_stdarg_h();
-	/* test_stdatomic_h(); */
+	test_stdatomic_h();
 	test_stdbool_h();
 	test_stddef_h();
 	test_stdint_h();
 	test_stdio_h();
 	test_stdlib_h();
-	/* test_stdnoreturn_h(); */
+	test_stdnoreturn_h();
 	test_string_h();
 	test_tgmath_h();
-	/* test_threads_h(); */
+	test_threads_h();
 	test_time_h();
-	/* test_uchar_h(); */
+	test_uchar_h();
 	test_wchar_h();
 	test_wctype_h();
 
