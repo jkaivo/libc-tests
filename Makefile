@@ -14,6 +14,7 @@ TESTOBJS=main.o \
 	limits.o \
 	locale.o \
 	math.o \
+	setjmp.o \
 	signal.o \
 	stdbool.o \
 	stddef.o \
