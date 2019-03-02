@@ -14,6 +14,8 @@ void test_errno_h(void)
 	testing_header("errno.h");
 
 	test_distinct(errno_values);
+	errno = 0;
+	test_int_equals(errno, 0);
 
 	testing_end();
 }
