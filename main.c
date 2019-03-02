@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 		}
 	}
 
-	test_complex_h();
+	/* test_complex_h(); */
 	test_ctype_h();
 	test_errno_h();
 	/* test_fenv_h(); */
@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 	test_iso646_h();
 	test_limits_h();
 	test_locale_h();
-	/* test_math_h(); */
+	test_math_h();
 	/* test_setjmp_h(); */
 	test_signal_h();
 	/* test_stdalign_h(); */

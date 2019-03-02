@@ -7,13 +7,13 @@ LDFLAGS=-L$(LIBDIR) $(LIBS)
 
 TESTOBJS=main.o \
 	assert.o \
-	complex.o \
 	ctype.o \
 	errno.o \
 	float.o \
 	iso646.o \
 	limits.o \
 	locale.o \
+	math.o \
 	signal.o \
 	stdbool.o \
 	stddef.o \
