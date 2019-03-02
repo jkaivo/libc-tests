@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 	/* test_setjmp_h(); */
 	test_signal_h();
 	/* test_stdalign_h(); */
-	/* test_stdarg_h(); */
+	test_stdarg_h();
 	/* test_stdatomic_h(); */
 	test_stdbool_h();
 	test_stddef_h();

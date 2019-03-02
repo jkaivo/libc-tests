@@ -16,6 +16,7 @@ TESTOBJS=main.o \
 	math.o \
 	setjmp.o \
 	signal.o \
+	stdarg.o \
 	stdbool.o \
 	stddef.o \
 	time.o \
