@@ -90,7 +90,7 @@ void test_int_equals_imp(const char *expression, int result, int expected)
 
 void test_long_equals_imp(const char *expression, long result, long expected)
 {
-	print_result(result == expected, "%s == %l", expression, expected);
+	print_result(result == expected, "%s == %ld", expression, expected);
 }
 
 void test_double_imp(const char *expression, double result, double expected)
