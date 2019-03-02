@@ -2,7 +2,13 @@
 #include <limits.h>
 #include "test.h"
 
-#include "locale.d"
+static int locale_categories[] = {
+	LC_ALL,
+	LC_COLLATE,
+	LC_CTYPE,
+	LC_MONETARY,
+	LC_NUMERIC,
+};
 
 void test_locale_h(void)
 {

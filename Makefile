@@ -19,11 +19,6 @@ TESTOBJS=main.o \
 	time.o \
 	test.o
 
-.SUFFIXES: .defs .d
-
-.defs.d:
-	awk -f defs2d.awk $< > $@
-
 testlibc: $(TESTOBJS) $(LIBDIR)/libc.a
 	$(CC) -o $@ $(TESTOBJS) $(LDFLAGS)
 
@@ -36,10 +31,10 @@ float.o: float.c test.h
 inttypes.o: inttypes.c test.h
 iso646.o: iso646.c test.h
 limits.o: limits.c test.h
-locale.o: locale.c locale.d test.h
+locale.o: locale.c test.h
 math.o: math.c test.h
 setjmp.o: setjmp.c test.h
-signal.o: signal.c signal.d test.h
+signal.o: signal.c test.h
 stdalign.o: stdalign.c test.h
 stdard.o: stdarg.c test.h
 stdatomic.o: stdatomic.c test.h

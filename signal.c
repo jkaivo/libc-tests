@@ -1,7 +1,16 @@
 #include <signal.h>
 #include "test.h"
 
-#include "signal.d"
+static sig_atomic_t sig_atomic;
+
+static int signals[] = {
+	SIGABRT,
+	SIGFPE,
+	SIGILL,
+	SIGINT,
+	SIGSEGV,
+	SIGTERM,
+};
 
 void test_signal_h(void)
 {

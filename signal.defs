@@ -1,2 +1,0 @@
-type sig_atomic_t
-distinct signals SIGABRT SIGFPE SIGILL SIGINT SIGSEGV SIGTERM
