@@ -1,12 +1,12 @@
 #include <stddef.h>
 #include "test.h"
 
-static ptrdiff_t ptrdiff;
-static size_t size;
-static wchar_t wchar;
-
 void test_stddef_h(void)
 {
+	ptrdiff_t ptrdiff;
+	size_t size;
+	wchar_t wchar;
+
 	struct s {
 		char a;
 		char b;

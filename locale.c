@@ -2,17 +2,16 @@
 #include <limits.h>
 #include "test.h"
 
-static int locale_categories[] = {
-	LC_ALL,
-	LC_COLLATE,
-	LC_CTYPE,
-	LC_MONETARY,
-	LC_NUMERIC,
-};
-
 void test_locale_h(void)
 {
 	struct lconv *lc;
+	int locale_categories[] = {
+		LC_ALL,
+		LC_COLLATE,
+		LC_CTYPE,
+		LC_MONETARY,
+		LC_NUMERIC,
+	};
 
 	testing_header("locale.h");
 

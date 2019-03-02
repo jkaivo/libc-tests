@@ -2,10 +2,10 @@
 #include <stdbool.h>
 #include "test.h"
 
-static bool b;
-
 void test_stdbool_h(void)
 {
+	bool b;
+
 	testing_header("stdbool.h");
 
 	test_true(true);

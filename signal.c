@@ -1,19 +1,19 @@
 #include <signal.h>
 #include "test.h"
 
-static sig_atomic_t sig_atomic;
-
-static int signals[] = {
-	SIGABRT,
-	SIGFPE,
-	SIGILL,
-	SIGINT,
-	SIGSEGV,
-	SIGTERM,
-};
-
 void test_signal_h(void)
 {
+	sig_atomic_t sig_atomic;
+
+	int signals[] = {
+		SIGABRT,
+		SIGFPE,
+		SIGILL,
+		SIGINT,
+		SIGSEGV,
+		SIGTERM,
+	};
+
 	testing_header("signal.h");
 
 	test_distinct(signals);
