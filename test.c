@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
+#include <float.h>
 
 unsigned int total_passed = 0;
 unsigned int total_failed = 0;
@@ -85,6 +86,12 @@ void testing_comment(const char *comment)
 void test_int_equals_imp(const char *expression, int result, int expected)
 {
 	print_result(result == expected, "%s == %d", expression, expected);
+}
+
+void test_double_imp(const char *expression, double result, double expected)
+{
+	int success = (result - expected < DBL_EPSILON);
+	print_result(success, "%s == %d", expression, (int)expected);
 }
 
 void test_void_imp(const char *expression)
