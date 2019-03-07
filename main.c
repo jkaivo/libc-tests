@@ -68,9 +68,20 @@ static struct {
 	{ "wctype",	test_wctype_h,		1 },
 };
 
+void show_tests(void)
+{
+	size_t i;
+	printf("Valid tests: %s", tests[0].name);
+	for (i = 1; i < sizeof(tests) / sizeof(tests[0]); i++) {
+		printf(", %s", tests[i].name);
+	}
+	printf("\n");
+}
+
 void usage(const char *argv0)
 {
 	printf("Usage: %s [-v] [test...]\n", argv0);
+	show_tests();
 }
 
 int main(int argc, char *argv[])
