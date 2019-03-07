@@ -48,7 +48,7 @@ static struct {
 	{ "limits",	test_limits_h,		1 },
 	{ "locale",	test_locale_h,		1 },
 	{ "math",	test_math_h,		1 },
-	{ "setjmp",	test_setjmp_h,		0 },
+	{ "setjmp",	test_setjmp_h,		1 },
 	{ "signal",	test_signal_h,		1 },
 	{ "stdalign",	test_stdalign_h,	1 },
 	{ "stdarg",	test_stdarg_h,		1 },
