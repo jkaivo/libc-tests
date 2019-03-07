@@ -13,6 +13,7 @@ void test_complex_h(void)
 	test_true(cimag(I) == 1);
 	test_true(creal(_Complex_I) == 0);
 	test_true(cimag(_Complex_I) == 1);
+	test_double(I * I, -1);
 
 	#ifdef _Imaginary_I
 	test_true(creal(_Imaginary_I) == 0);
