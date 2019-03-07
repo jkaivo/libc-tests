@@ -12,11 +12,13 @@ void test_stddef_h(void)
 		char b;
 	};
 
+	static struct s the_s;
+
 	testing_header("stddef.h");
 
 	test_true(NULL == 0);
 
-	test_int_equals(offsetof(struct s, b), 1);
+	test_int_equals(offsetof(struct s, b), (char*)&(the_s.b) - (char*)&the_s);
 
 	testing_end();
 }
