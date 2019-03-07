@@ -9,7 +9,7 @@ void test_stdint_h(void)
 	intmax_t intmax;
 	uintmax_t uintmax;
 
-	testing_header("inttypes.h");
+	testing_header("stdint.h");
 
 	test_min(INTPTR_MIN, 0);
 	test_min(INTPTR_MAX, 0);
