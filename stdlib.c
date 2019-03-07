@@ -30,5 +30,7 @@ void test_stdlib_h(void)
 	test_long_equals(strtol("zzzzzzzzzzzzzzzzzzzz", NULL, 36), LONG_MAX);
 	test_long_equals(strtol("-zzzzzzzzzzzzzzzzzzzz", NULL, 36), LONG_MIN);
 
+	test_double(strtod("1.5", NULL), 1.5);
+
 	testing_end();
 }
