@@ -16,9 +16,7 @@ void test_stddef_h(void)
 
 	test_true(NULL == 0);
 
-	/*
-	test_int_eq(offsetof(struct s, b), 1);
-	*/
+	test_int_equals(offsetof(struct s, b), 1);
 
 	testing_end();
 }
