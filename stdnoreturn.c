@@ -2,14 +2,9 @@
 #include <stdnoreturn.h>
 #include "test.h"
 
-noreturn void foo(void)
-{
-	for (;;);
-}
-
 void test_stdnoreturn_h(void)
 {
-	testing_header(".h");
+	testing_header("stdnoreturn.h");
 
 	/* tested by the fact that this compiles */
 

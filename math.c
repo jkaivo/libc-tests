@@ -1,4 +1,5 @@
 #include <math.h>
+#include "_math.h"
 #include "test.h"
 
 void test_math_h(void)
@@ -15,7 +16,6 @@ void test_math_h(void)
 
 	testing_header("math.h");
 
-	test_defined(HUGE_VAL);
 	test_double(acos(1), 0);
 	test_double(asin(1), 0);
 	test_double(atan(1), 0);

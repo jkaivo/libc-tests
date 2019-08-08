@@ -1,5 +1,6 @@
 #if defined __STDC_VERSION__ && 201112L <= __STDC_VERSION__
 #include <stdalign.h>
+#include "_stdalign.h"
 #include "test.h"
 
 void test_stdalign_h(void)
