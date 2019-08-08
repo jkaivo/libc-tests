@@ -10,8 +10,8 @@ void test_stdalign_h(void)
 	/* alignas() */
 	/* alignof() */
 
-	test_defined(__alignas_is_defined);
-	test_defined(__alignof_is_defined);
+	test_int_equals(__alignas_is_defined, 1);
+	test_int_equals(__alignof_is_defined, 1);
 
 	testing_end();
 }

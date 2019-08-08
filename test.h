@@ -21,7 +21,6 @@ void test_bool_imp(const char *, int, int);
 #define test_true(expression) test_bool_imp(#expression, expression, 1)
 #define test_min(expression, min) test_bool_imp(#expression, min < 0 ? expression <= min : expression >= min, 1)
 #define test_max(expression, max) test_bool_imp(#expression, 0 < expression && expression <= max, 1)
-#define test_defined(expression) test_false(expression * 0)
 
 void test_string_imp(const char*, const char*, const char*);
 #define test_string(expression, string) test_string_imp(#expression, expression, string)

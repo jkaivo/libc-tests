@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "_stdio.h"
 #include "test.h"
 
 void test_stdio_h(void)
@@ -23,7 +24,6 @@ void test_stdio_h(void)
 
 	test_distinct(buftypes);
 	test_min(BUFSIZ, 256);
-	test_defined(EOF);
 	test_min(FILENAME_MAX, 1);
 	test_min(FOPEN_MAX, 8);
 	test_min(L_tmpnam, 1);

@@ -62,16 +62,16 @@ stdatomic.o: stdatomic.c test.h
 stdbool.o: stdbool.c test.h
 stddef.o: stddef.c test.h
 stdint.o: stdint.c test.h
-stdio.o: stdio.c test.h
+stdio.o: stdio.c test.h _stdio.h
 stdlib.o: stdlib.c test.h
-stdnoreturn.o: stdnoreturn.c test.h
+stdnoreturn.o: stdnoreturn.c test.h _stdnoreturn.h
 string.o: string.c test.h
 tgmath.o: tgmath.c test.h
 threads.o: threads.c test.h
 time.o: time.c test.h
 uchar.o: uchar.c test.h
-wchar.o: wchar.c test.h
-wctype.o: wctype.c test.h
+wchar.o: wchar.c test.h _wchar.h
+wctype.o: wctype.c test.h _wctype.h
 
 test.o: test.c test.h
 main.o: main.c test.h
