@@ -1,5 +1,7 @@
 .POSIX:
 
+.SUFFIXES: .h .d
+
 include config.mk
 
 CC=c99
@@ -51,10 +53,10 @@ inttypes.o: inttypes.c test.h
 iso646.o: iso646.c test.h
 limits.o: limits.c test.h
 locale.o: locale.c test.h
-math.o: math.c test.h
+math.o: math.c test.h _math.h
 setjmp.o: setjmp.c test.h
 signal.o: signal.c test.h
-stdalign.o: stdalign.c test.h
+stdalign.o: stdalign.c test.h _stdalign.h
 stdard.o: stdarg.c test.h
 stdatomic.o: stdatomic.c test.h
 stdbool.o: stdbool.c test.h
@@ -74,8 +76,8 @@ wctype.o: wctype.c test.h
 test.o: test.c test.h
 main.o: main.c test.h
 
-_float.h: float.d
-	awk '{printf("#ifndef %s\n#error %s not defined\n#endif\n", $$0, $$0);}' float.d > $@
+.d.h:
+	awk '{printf("#ifndef %s\n#error %s not defined\n#endif\n", $$0, $$0);}' $< > $@
 
 clean:
 	rm -f *.o testlibc
