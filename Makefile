@@ -46,7 +46,7 @@ complex.o: complex.c test.h
 ctype.o: ctype.c test.h
 errno.o: errno.c test.h
 fenv.o: fenv.c test.h
-float.o: float.c test.h
+float.o: float.c test.h _float.h
 inttypes.o: inttypes.c test.h
 iso646.o: iso646.c test.h
 limits.o: limits.c test.h
@@ -73,6 +73,9 @@ wctype.o: wctype.c test.h
 
 test.o: test.c test.h
 main.o: main.c test.h
+
+_float.h: float.d
+	awk '{printf("#ifndef %s\n#error %s not defined\n#endif\n", $$0, $$0);}' float.d > $@
 
 clean:
 	rm -f *.o testlibc

@@ -1,4 +1,5 @@
 #include <float.h>
+#include "_float.h"
 #include "test.h"
 
 void test_float_h(void)
@@ -6,26 +7,17 @@ void test_float_h(void)
 	testing_header("float.h");
 
 	test_min(DBL_DIG, 10);
-	test_defined(DBL_MANT_DIG);
 	test_min(DBL_MAX_10_EXP, 37);
-	test_defined(DBL_MAX_EXP);
 	test_min(DBL_MIN_10_EXP, -37);
-	test_defined(DBL_MIN_EXP);
 
 	test_min(FLT_DIG, 6);
-	test_defined(FLT_MANT_DIG);
 	test_min(FLT_MAX_10_EXP, 37);
-	test_defined(FLT_MAX_EXP);
 	test_min(FLT_MIN_10_EXP, -37);
-	test_defined(FLT_MIN_EXP);
 	test_min(FLT_RADIX, 2);
 	
 	test_min(LDBL_DIG, 6);
-	test_defined(LDBL_MANT_DIG);
 	test_min(LDBL_MAX_10_EXP, 37);
-	test_defined(LDBL_MAX_EXP);
 	test_min(LDBL_MIN_10_EXP, -37);
-	test_defined(LDBL_MIN_EXP);
 
 	test_min(DBL_MAX, 1e+37);
 	test_min(FLT_MAX, 1e+37);
