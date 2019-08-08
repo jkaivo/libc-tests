@@ -14,8 +14,13 @@ void test_wchar_h(void)
 	testing_header("wchar.h");
 
 	test_true(NULL == 0);
-	test_min(WCHAR_MIN, 0);
-	test_min(WCHAR_MAX, 0);
+
+	if (WCHAR_MIN == 0) {
+		test_min(WCHAR_MAX, 255);
+	} else {
+		test_min(WCHAR_MIN, -127);
+		test_min(WCHAR_MAX, 127);
+	}
 
 	testing_end();
 }
