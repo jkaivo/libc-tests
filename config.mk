@@ -1,4 +1,3 @@
-CC=c99
-INCLUDEDIR=../include
-LIBDIR=../
-LIBS=-lc -lm
+CC=ungol-gcc
+CFLAGS=-fno-builtin -g -std=c89
+LDFLAGS=-lc -lm
