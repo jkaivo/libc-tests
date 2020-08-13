@@ -4,10 +4,6 @@
 
 include config.mk
 
-CC=c99
-CFLAGS=-g -I$(INCLUDEDIR) -nostdinc -fno-builtin
-LDFLAGS=-L$(LIBDIR) $(LIBS)
-
 TESTOBJS=main.o \
 	assert.o \
 	complex.o \
@@ -40,7 +36,7 @@ TESTOBJS=main.o \
 	wctype.o \
 	test.o
 
-testlibc: $(TESTOBJS) $(LIBDIR)/libc.a
+testlibc: $(TESTOBJS)
 	$(CC) -o $@ $(TESTOBJS) $(LDFLAGS)
 
 $(TESTOBJS): test.h
