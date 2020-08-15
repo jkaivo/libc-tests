@@ -8,6 +8,10 @@ void test_stdlib_h(void)
 	ldiv_t ldiv;
 	size_t size;
 	wchar_t wchar;
+	(void)div;
+	(void)ldiv;
+	(void)size;
+	(void)wchar;
 
 	int exit_statuses[] = {
 		EXIT_FAILURE,
