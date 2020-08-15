@@ -10,6 +10,11 @@ void test_wchar_h(void)
 	mbstate_t mbstate;
 	wint_t wint;
 	struct tm *tm;
+	(void)wchar;
+	(void)size;
+	(void)mbstate;
+	(void)wint;
+	(void)tm;
 
 	testing_header("wchar.h");
 
