@@ -8,6 +8,9 @@ void test_wctype_h(void)
 	wint_t wint;
 	wctrans_t wctrans;
 	wctype_t wctype;
+	(void)wint;
+	(void)wctrans;
+	(void)wctype;
 
 	testing_header("wctype.h");
 
