@@ -7,6 +7,9 @@ void test_stdio_h(void)
 	FILE *file;
 	fpos_t fpos;
 	size_t size;
+	(void)file;
+	(void)fpos;
+	(void)size;
 
 	int buftypes[] = {
 		_IOFBF,
@@ -23,6 +26,8 @@ void test_stdio_h(void)
 	testing_header("stdio.h");
 
 	test_distinct(buftypes);
+	test_distinct(seeks);
+
 	test_min(BUFSIZ, 256);
 	test_min(FILENAME_MAX, 1);
 	test_min(FOPEN_MAX, 8);
