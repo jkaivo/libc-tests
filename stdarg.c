@@ -10,7 +10,6 @@ static void variadic(type t, ...)
 	int i;
 	long l;
 	double d;
-	float f;
 	long double ld;
 	void *p;
 
