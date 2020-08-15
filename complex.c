@@ -1,6 +1,6 @@
 #if defined __STDC_VERSION__ && \
 	(__STDC_VERSION__ == 199901L || \
-	 (20112L <= __STDC_VERSION__ && ! defined __STDC_NO_COMPLEX__))
+	 (201112L <= __STDC_VERSION__ && ! defined __STDC_NO_COMPLEX__))
 #include <complex.h>
 #include "test.h"
 
