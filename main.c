@@ -87,18 +87,19 @@ void usage(const char *argv0)
 int main(int argc, char *argv[])
 {
 	int torun = 1;
-	int i, j;
+	int a;
+	size_t i, j;
 
-	for (i = 1; i < argc; i++) {
+	for (a = 1; a < argc; a++) {
 		int ok = 0;
 
-		if (!strcmp("-v", argv[i])) {
+		if (!strcmp("-v", argv[a])) {
 			verbose = 1;
 			ok = 1;
 		}
 
 		for (j = 0; j < sizeof(tests) / sizeof(tests[0]); j++) {
-			if (!strcmp(tests[j].name, argv[i])) {
+			if (!strcmp(tests[j].name, argv[a])) {
 				torun = 2;
 				tests[j].run = 2;
 				ok = 1;
