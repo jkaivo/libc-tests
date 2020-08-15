@@ -40,7 +40,7 @@ void test_math_h(void)
 	test_double(floor(0.9), 0);
 	test_double(fmod(1, 1), 0);
 
-	#if defined __STDC_VERSION__ && 19901 <= __STDC_VERSION__
+	#if defined __STDC_VERSION__ && 199901 <= __STDC_VERSION__
 	test_int_equals(signbit(ldm1), 1);
 	test_int_equals(signbit(dm1), 1);
 	test_int_equals(signbit(fm1), 1);
