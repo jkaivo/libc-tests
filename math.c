@@ -7,13 +7,6 @@ void test_math_h(void)
 	int iexp = 1;
 	double iptr = 0;
 
-	long double ldm1 = -1.0;
-	double dm1 = -1.0;
-	float fm1 = -1.0;
-	long double ld1 =  1.0;
-	double d1 = 1.0;
-	float f1 = 1.0;
-
 	testing_header("math.h");
 
 	test_double(acos(1), 0);
@@ -41,6 +34,13 @@ void test_math_h(void)
 	test_double(fmod(1, 1), 0);
 
 	#if defined __STDC_VERSION__ && 199901 <= __STDC_VERSION__
+	long double ldm1 = -1.0;
+	double dm1 = -1.0;
+	float fm1 = -1.0;
+	long double ld1 =  1.0;
+	double d1 = 1.0;
+	float f1 = 1.0;
+
 	test_int_equals(signbit(ldm1), 1);
 	test_int_equals(signbit(dm1), 1);
 	test_int_equals(signbit(fm1), 1);
