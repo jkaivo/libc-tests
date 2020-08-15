@@ -8,6 +8,7 @@ void test_string_h(void)
 	char less[] = "a";
 	char more[] = "b";
 	char haystack[] = "the five boxing wizards jump quickly";
+	(void)size;
 
 	testing_header("string.h");
 
