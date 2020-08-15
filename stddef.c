@@ -1,18 +1,22 @@
 #include <stddef.h>
 #include "test.h"
 
+struct s {
+	char a;
+	char b;
+};
+
 void test_stddef_h(void)
 {
 	ptrdiff_t ptrdiff;
 	size_t size;
 	wchar_t wchar;
 
-	struct s {
-		char a;
-		char b;
-	};
-
 	static struct s the_s;
+
+	(void)ptrdiff;
+	(void)size;
+	(void)wchar;
 
 	testing_header("stddef.h");
 
