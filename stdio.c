@@ -2,15 +2,12 @@
 #include "_stdio.h"
 #include "test.h"
 
+FILE *test_file;
+fpos_t test_fpos;
+size_t test_size;
+
 void test_stdio_h(void)
 {
-	FILE *file;
-	fpos_t fpos;
-	size_t size;
-	(void)file;
-	(void)fpos;
-	(void)size;
-
 	int buftypes[] = {
 		_IOFBF,
 		_IOLBF,

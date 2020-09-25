@@ -5,6 +5,10 @@
 #include "_wctype.h"
 #include "test.h"
 
+wint_t test_wint;
+wctrans_t test_wctrans;
+wctype_t test_wctype;
+
 #define UPPER L"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 #define LOWER L"abcdefghijklmnopqrstuvwxyz"
 #define DIGIT L"0123456789"
@@ -68,13 +72,6 @@ static void test_ctype_conversion_imp(const char *fnname, int (*fn)(int), const 
 
 void test_wctype_h(void)
 {
-	wint_t wint;
-	wctrans_t wctrans;
-	wctype_t wctype;
-	(void)wint;
-	(void)wctrans;
-	(void)wctype;
-
 	testing_header("wctype.h");
 
 	test_ctype_function(iswalnum, UPPER LOWER DIGIT);

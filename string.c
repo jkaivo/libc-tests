@@ -1,14 +1,14 @@
 #include <string.h>
 #include "test.h"
 
+size_t test_size;
+
 void test_string_h(void)
 {
-	size_t size;
 	char dst[64] = { 0 };
 	char less[] = "a";
 	char more[] = "b";
 	char haystack[] = "the five boxing wizards jump quickly";
-	(void)size;
 
 	testing_header("string.h");
 
@@ -60,6 +60,7 @@ void test_string_h(void)
 	test_true(strspn(haystack, "12345") == 0);
 	test_true(strspn(haystack, "eht") == 3);
 
+	test_true(strstr(haystack, "") == haystack);
 	test_true(strstr(haystack, "wizard") == haystack + 16);
 	test_true(strstr(haystack, "rogue") == NULL);
 

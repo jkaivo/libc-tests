@@ -6,17 +6,13 @@ struct s {
 	char b;
 };
 
+ptrdiff_t test_ptrdiff;
+size_t test_size;
+wchar_t test_wchar;
+
 void test_stddef_h(void)
 {
-	ptrdiff_t ptrdiff;
-	size_t size;
-	wchar_t wchar;
-
 	static struct s the_s;
-
-	(void)ptrdiff;
-	(void)size;
-	(void)wchar;
 
 	testing_header("stddef.h");
 

@@ -3,19 +3,14 @@
 #include "_wchar.h"
 #include "test.h"
 
+wchar_t test_wchar;
+size_t test_size;
+mbstate_t test_mbstate;
+wint_t test_wint;
+struct tm *test_tm;
+
 void test_wchar_h(void)
 {
-	wchar_t wchar;
-	size_t size;
-	mbstate_t mbstate;
-	wint_t wint;
-	struct tm *tm;
-	(void)wchar;
-	(void)size;
-	(void)mbstate;
-	(void)wint;
-	(void)tm;
-
 	testing_header("wchar.h");
 
 	test_true(NULL == 0);

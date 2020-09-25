@@ -1,10 +1,10 @@
 #include <signal.h>
 #include "test.h"
 
+sig_atomic_t test_sig_atomic = 0;
+
 void test_signal_h(void)
 {
-	sig_atomic_t sig_atomic = 0;
-
 	int signals[] = {
 		SIGABRT,
 		SIGFPE,
@@ -13,8 +13,6 @@ void test_signal_h(void)
 		SIGSEGV,
 		SIGTERM,
 	};
-
-	(void)sig_atomic;
 
 	testing_header("signal.h");
 

@@ -2,17 +2,13 @@
 #include <limits.h>
 #include "test.h"
 
+div_t test_div;
+ldiv_t test_ldiv;
+size_t test_size;
+wchar_t test_wchar;
+
 void test_stdlib_h(void)
 {
-	div_t div;
-	ldiv_t ldiv;
-	size_t size;
-	wchar_t wchar;
-	(void)div;
-	(void)ldiv;
-	(void)size;
-	(void)wchar;
-
 	int exit_statuses[] = {
 		EXIT_FAILURE,
 		EXIT_SUCCESS,
